@@ -15,11 +15,12 @@ import stop_words
 import re
 
 # Set dir
-os.chdir("G:\Mi unidad\UPF")
-path_to_files = os.getcwd() + "\data"
+# os.chdir("G:\Mi unidad\UPF")
+# path_to_files = os.getcwd() + "\data"
 
 # Import dataset
-proposals = pd.read_csv(path_to_files + "\proposals_actions_lang.csv", sep=",", header=0)
+# proposals = pd.read_csv(path_to_files + "\proposals_actions_lang.csv", sep=",", header=0)
+proposals = pd.read_csv("\data\proposals_actions_lang.csv", sep=",", header=0)
 
 # Set some wrong langauge labels by hand
 proposals.iloc[2510, proposals.columns.get_loc('language')] = 'ca'
